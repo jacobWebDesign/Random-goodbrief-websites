@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Górny pasek nawigacji -->
+    <div class="topnav">
+        <div class="logo">
+            <h3>FIRST</h3>
+        </div>
+    <!-- Sekcje paska nawigacji -->
+                <div class="navcon" id="myTopnav">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#news">News</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>    
+        
+      </div>
+    <!-- Tło diva -->
+    <div class="imgblok">
+        <img src="img/landingpage.jpg" class="landing_img">
+        <div id="img_sub">
+            <h3>We aim high to lift u up </br> 
+            
+            </h3>
+        </div>
+    </div>
+
+    <!-- O nas -->
+
+    <div class="flexbox">
+        <div class="smallbox">
+            <img src="img/delivery-icon.svg">
+            <h3>High Quality Delivery</h3>
+            We are company with high quality delivery. You don't need to worry about your package's status or time. We are consistently improving our delivery system so it will come at your door at ideal state and within shortest amount of time.
+        </div>
+        <div class="smallbox">
+            <img src="img/certificate-icon.svg">
+            <h3>Certified shop</h3>
+            We have a lot of certificates that you probably do not care about because it's not in your business to be curious about who we paid to earn them :D
+        </div>
+        <div class="smallbox">
+            <img src="img/note-icon.svg">
+            <h3>Producer And Provider</h3>
+            We believe in our PP movement - Produce and Provide. We do both! We make the latest hits and send them to your house so you can enjoy them in your own corner!
+        </div>
+
+    </div>
+    
+    <div class="article_con">
+        <div class="article">
+            <h2>Start your day with our hits!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut facilisis erat. Suspendisse convallis porta feugiat. Fusce tristique elit vel lacinia malesuada. Etiam faucibus tortor libero, sed tempor felis tincidunt non. Mauris venenatis, sem ut sollicitudin tempus, orci libero imperdiet lectus, eget pellentesque urna dui vitae metus. Ut ornare mi sed neque mattis maximus eu eget arcu. Phasellus posuere magna sed risus tincidunt, eget porttitor massa scelerisque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque dapibus venenatis metus finibus efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi at ultricies augue. Proin maximus ligula mi, nec interdum tortor finibus a. Vestibulum vitae tincidunt velit, a sollicitudin ipsum. In pulvinar, quam ut facilisis semper, quam dui malesuada urna, vel aliquam leo urna et leo.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_text">
+        Copyrighted by <b>FIRST &copy;. </b> All rights reserved
+        </div>
+    </footer>
+            
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "navcon") {
+            x.className += " responsive";
+          } else {
+            x.className = "navcon";
+          }
+        }
+        </script>
+        
+</body>
+</html>

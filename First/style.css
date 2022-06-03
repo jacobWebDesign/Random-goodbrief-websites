@@ -1,0 +1,319 @@
+
+/* Roboto font Thin 100/ regular 400/ Bold 700 */
+
+/* Animacje */
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+
+    }
+
+/* Animacje */
+
+
+body {
+    background-color: #fff;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+    /* Modyfikacja scrolla */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background-color: #fff;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #ca0ddb;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #994195;
+            }
+
+/* Pasek nawigacji */
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20px;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft;
+    
+    
+    }
+
+    .navcon .icon {
+        display: none;
+    }
+
+  
+
+        /* Navcon - Kontener na wszystki linki/ Przyciski zrobione za pomocą Kotwicy (anchor) */
+
+        .navcon a {
+            display: inline-block;
+            color: #313131;
+            text-align: center;
+            padding: 16px 40px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.5s;
+            /* margin: 0px 40px 0px 40px; */
+        }
+
+        .navcon a.active {
+            font-weight: 700;
+            
+            
+        }
+
+            .navcon a:hover {
+                color: #ca0ddb;
+                font-size: 20px;
+                transition: 0.5s;
+                padding: 12px 40px;
+                
+            }
+
+
+            .logo {
+                position: absolute;
+                font-size: 25px;
+                margin-left: 50px;
+                margin-top: -25px;
+                color: #ca0ddb;
+               
+                
+                
+            }
+
+        /* Przyjazny mobilnie pasek nawigacji */
+
+                @media screen and (max-width: 600px) {
+                    .navcon a:not(:first-child) {display: none;}
+                    .navcon a.icon {
+                    float: right;
+                    display: block;
+                    }
+                    }
+                
+                    @media screen and (max-width: 600px) {
+                    .navcon.responsive {position: relative; margin-top: 40px;}
+                    .navcon.responsive .icon {
+                        position: absolute;
+                        right: 0;
+                        top: -40px;
+                    }
+                    .navcon.responsive a {
+                        float: none;
+                        display: block;
+                        text-align: left;
+                    }
+                    .navcon.responsive a:hover {
+                        padding: 14px 40px;
+                        transition: 0.5s;
+                    }
+                    }
+
+            
+
+/* blok ze zdjęciem */
+
+.imgblok {
+    width: 100%;
+    background-color: #313131;
+    height: 500px;
+    max-height: 600px;
+    transition: 0.5s;
+    }
+
+        .landing_img {
+            
+            width: 100%;
+            height: 504px;
+            object-fit: cover;
+            filter: brightness(90%);
+            transition: 0.5s;
+        }
+
+        .landing_img:hover {
+            filter: brightness(70%);
+            height: 550px;
+            transition: 0.5s;
+        }
+
+    .imgblok:hover {
+        height: 550px;
+        transition: 0.5s;
+    }
+
+/* zmiana wielkości bloku ze zdjęciem na monitorach full HD */
+
+@media screen and (max-width: 1920px) {
+    .imgblok {
+        height: 450px;
+    }
+    .imgblok:hover {
+        height: 490px;
+    }
+        .landing_img {
+            height: 450px;
+        }
+        .landing_img:hover {
+            height: 490px;
+        }
+    
+}
+
+/* Napis na divie */
+
+#img_sub {
+    position: absolute;
+    margin: -350px 0px 0px 400px;
+    color: white;
+    font-size: 40px;
+    transition: 0.5s;
+    pointer-events: none;
+    text-shadow: 0px 0px 6px #313131;
+    animation: 3s ease-in-out 0s 1 fadeIn;
+    
+}
+
+/* zmiana położenia i wielkości napisu na monitorach full HD */
+
+@media screen and (max-width: 1920px) {
+    #img_sub {
+        margin: -285px 0px 0px 350px;
+        font-size: 35px;
+    }
+}
+
+/* przeniesienie napisu gdy otwarte na mobilce */
+
+@media screen and (max-width: 800px) {
+
+    #img_sub {
+        display: block;
+        margin: -300px 0% 0px 100px;
+        translate: (-50% -50%);
+        transition: 0.5s;
+        font-size: 30px;
+    }
+    
+}
+
+
+
+/* Flexbox z divami  */
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    gap: 30px 100px;
+    background-color: rgb(247, 247, 247);
+    padding: 30px 0px 30px 0px;
+    transition: 0.5s;
+    animation: 4s ease-in-out 0s 1 fadeIn;
+    
+
+}
+/* zmiana ułożenia flexa gdy otwarty na telefonie */
+@media screen and (max-width: 800px) {
+    .flexbox {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        
+    }
+    
+}
+
+        .smallbox {
+            width: 294px;
+            /* display: flexbox; */
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: #cecece46 3px 3px 3px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 18px;
+            border-bottom: 5px solid rgb(202, 8, 255);
+        }
+
+        .smallbox h3 {
+            color: rgb(202, 8, 255);
+            text-align: center;
+            text-shadow: 0px 0px 2px #cdcccc;
+            font-weight: 700;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .smallbox img {
+            width: 60px;
+            display: block;
+            margin: 10px 117px 20px 117px;
+            filter: drop-shadow(0px 0px 0px #b945b4);
+            
+            
+        }
+
+/* div z artykułem na stronie */ 
+
+    .article_con {
+        
+        padding: 30px;
+        
+    }
+        .article {
+        min-width: 294px;
+        max-width: 1170px;
+        padding: 20px;
+        margin: 10px auto 10px auto;
+        font-size: 22px;
+        animation: 4s ease-in-out 0s 1 fadeIn;
+       /* background-color: #fff;
+        border-radius: 5px;
+        border-bottom: 5px solid rgb(202, 8, 255);
+        box-shadow: #cecece46 3px 3px 3px;
+        */
+    }
+        .article h2 {
+            margin-top: 0px;
+            color: rgb(202, 8, 255);
+        }
+
+footer {
+    background-color: rgb(202, 8, 255);
+    color: white;
+}
+
+    .footer_text {
+        padding: 10px;
+        margin: 0px 0px 0px 320px;
+        
+    }
+
+    @media screen and (max-width: 800px) {
+        .footer_text {
+        text-align: center;
+        margin: 0px;
+        }
+    }
